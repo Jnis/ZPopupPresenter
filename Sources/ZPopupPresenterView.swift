@@ -49,6 +49,7 @@ public struct ZPopupPresenterView: View {
         ZStack {
             ForEach(0..<model.popups.count, id: \.self) { index in
                 model.popups[index]
+                    .zIndex(CGFloat(index + 1))
             }
         }
     }
