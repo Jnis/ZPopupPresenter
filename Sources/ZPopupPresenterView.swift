@@ -24,6 +24,8 @@ extension ZPopupPresenterModel {
 public class ZPopupPresenterModel: ObservableObject {
     @Published var popups: [WrappedView] = []
     
+    public init() { }
+    
     func showPopup(_ makeViewClosure: (_ close: @escaping () -> Void) -> AnyView) {
         let idModel = IDModel()
         let userView = makeViewClosure({[weak idModel, weak self] in
@@ -38,6 +40,10 @@ public class ZPopupPresenterModel: ObservableObject {
 
 public struct ZPopupPresenterView: View {
     @StateObject var model: ZPopupPresenterModel
+    
+    public init(model: ZPopupPresenterModel) {
+        self._model = StateObject(wrappedValue: model)
+    }
     
     public var body: some View {
         ZStack {
