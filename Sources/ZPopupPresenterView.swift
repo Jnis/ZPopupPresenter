@@ -21,7 +21,7 @@ extension ZPopupPresenterModel {
     }
 }
 
-class ZPopupPresenterModel: ObservableObject {
+public class ZPopupPresenterModel: ObservableObject {
     @Published var popups: [WrappedView] = []
     
     func showPopup(_ makeViewClosure: (_ close: @escaping () -> Void) -> AnyView) {
@@ -36,10 +36,10 @@ class ZPopupPresenterModel: ObservableObject {
     }
 }
 
-struct ZPopupPresenterView: View {
+public struct ZPopupPresenterView: View {
     @StateObject var model: ZPopupPresenterModel
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             ForEach(0..<model.popups.count, id: \.self) { index in
                 model.popups[index]
