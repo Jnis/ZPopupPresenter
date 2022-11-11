@@ -26,7 +26,7 @@ public class ZPopupPresenterModel: ObservableObject {
     
     public init() { }
     
-    func showPopup(_ makeViewClosure: (_ close: @escaping () -> Void) -> AnyView) {
+    public func showPopup(_ makeViewClosure: (_ close: @escaping () -> Void) -> AnyView) {
         let idModel = IDModel()
         let userView = makeViewClosure({[weak idModel, weak self] in
             guard let self = self, let idModel = idModel else { return }
