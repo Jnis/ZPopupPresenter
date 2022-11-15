@@ -21,7 +21,6 @@ struct ContentView: View {
                             Label("Menu", systemImage: "list.dash")
                         }
                         .environmentObject(zPopupPresenterModel) // 2. inject model for subviews
-                    //
                 }
             }
             
