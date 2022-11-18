@@ -10,12 +10,24 @@ import ZPopupPresenter
 
 struct MenuView: View {
     @EnvironmentObject var zPopupPresenterModel: ZPopupPresenterModel
+    @State var blurValue: CGFloat = 0
     
     var body: some View {
         VStack(spacing: 24) {
         
-            Button("Show Demo 1",
-                   action: {
+            HStack {
+                Color.blue
+                Color.yellow
+                Color.gray
+                Color.white
+                Color.black
+                Color.red
+            }
+            .frame(height: 100)
+            
+            Spacer()
+            
+            Button("Show Demo 1", action: {
                 zPopupPresenterModel.showPopup({ close in
                     AnyView(
                         Demo1View(buttonsOffset: 100, close: close)
@@ -30,12 +42,26 @@ struct MenuView: View {
             }, label: {
                 Text("Show Demo 2")
             })
+            
+            Button("Show Demo 3", action: {
+                zPopupPresenterModel.showPopup({ close in
+                    AnyView(
+                        Demo3View(close: close, blurValue: $blurValue)
+                    )
+                })
+            })
+            
+            Spacer()
         }
+        .blur(radius: blurValue)
     }
 }
 
 struct MenuView_Previews: PreviewProvider {
+    static let zPopupPresenterModel = ZPopupPresenterModel()
+    
     static var previews: some View {
         MenuView()
+            .environmentObject(zPopupPresenterModel)
     }
 }

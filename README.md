@@ -6,6 +6,7 @@ Easily to present different popups from any subview over fullscreen on SwiftUI.
 <tr>
 <td><img src="Examples/demo1.gif"/></td>
 <td><img src="Examples/demo2.gif"/></td>
+<td><img src="Examples/demo3.gif"/></td>
 </tr>
 </table>
 

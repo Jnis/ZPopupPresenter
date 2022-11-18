@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0918BEEB292829C400DC7C91 /* Demo3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0918BEEA292829C400DC7C91 /* Demo3View.swift */; };
+		0918BEED29282B5300DC7C91 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0918BEEC29282B5300DC7C91 /* Constants.swift */; };
 		094A7B56291EA61A00735FC8 /* ZPopupPresenter in Frameworks */ = {isa = PBXBuildFile; productRef = 094A7B55291EA61A00735FC8 /* ZPopupPresenter */; };
 		094A7B58291EA92900735FC8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B57291EA92900735FC8 /* MenuView.swift */; };
 		094A7B5A291EAA1B00735FC8 /* Demo1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B59291EAA1B00735FC8 /* Demo1View.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0918BEEA292829C400DC7C91 /* Demo3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo3View.swift; sourceTree = "<group>"; };
+		0918BEEC29282B5300DC7C91 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		094A7B57291EA92900735FC8 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		094A7B59291EAA1B00735FC8 /* Demo1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo1View.swift; sourceTree = "<group>"; };
 		094A7B5B291EAA2600735FC8 /* Demo2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo2View.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				094A7B5B291EAA2600735FC8 /* Demo2View.swift */,
 				094A7B61291EC04B00735FC8 /* Demo2ItemView.swift */,
 				094A7B5F291EB36A00735FC8 /* Demo2DetailsView.swift */,
+				0918BEEA292829C400DC7C91 /* Demo3View.swift */,
+				0918BEEC29282B5300DC7C91 /* Constants.swift */,
 				09B9E288291E786000D21DE7 /* Assets.xcassets */,
 				09B9E28A291E786000D21DE7 /* Examples.entitlements */,
 				09B9E28B291E786000D21DE7 /* Preview Content */,
@@ -167,8 +173,10 @@
 				094A7B58291EA92900735FC8 /* MenuView.swift in Sources */,
 				09B9E285291E785F00D21DE7 /* ExamplesApp.swift in Sources */,
 				094A7B60291EB36A00735FC8 /* Demo2DetailsView.swift in Sources */,
+				0918BEEB292829C400DC7C91 /* Demo3View.swift in Sources */,
 				094A7B5A291EAA1B00735FC8 /* Demo1View.swift in Sources */,
 				094A7B62291EC04B00735FC8 /* Demo2ItemView.swift in Sources */,
+				0918BEED29282B5300DC7C91 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

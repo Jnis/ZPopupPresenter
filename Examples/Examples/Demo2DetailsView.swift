@@ -27,16 +27,14 @@ struct Demo2DetailsView: View {
                         .matchedGeometryEffect(id: Demo2DetailsView.AnimationIDs.image, in: namespace)
                     
                     HStack {
-                        Text("Run Pig Run!")
+                        Text(Constants.demoTitle)
                             .font(.title)
-                            .padding(.bottom, 16)
                             .matchedGeometryEffect(id: Demo2DetailsView.AnimationIDs.title, in: namespace, properties: .position)
                         Spacer()
                     }.padding()
                     
                     HStack {
-                        Text(description)
-                            .padding(.bottom, 16)
+                        Text(Constants.demoTitleDescription)
                         Spacer()
                     }.padding()
                 }
@@ -61,13 +59,6 @@ struct Demo2DetailsView: View {
         .matchedGeometryEffect(id: Demo2DetailsView.AnimationIDs.bg, in: namespace)
     }
     
-    let description = """
-The piggy escaped from cage and he are waiting your help!
-
-Only you can help out the little pig to escape slaughterhouse, where prepare amazing pork. And we don't promise you, that it will be easy, but it will be interesting and exciting!!
-
-The success of the little piggy only in your hands.
-"""
 }
 
 struct Demo2DetailsView_Previews: PreviewProvider {
