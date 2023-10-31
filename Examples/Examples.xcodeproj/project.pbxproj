@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		0918BEEB292829C400DC7C91 /* Demo3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0918BEEA292829C400DC7C91 /* Demo3View.swift */; };
 		0918BEED29282B5300DC7C91 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0918BEEC29282B5300DC7C91 /* Constants.swift */; };
-		094A7B56291EA61A00735FC8 /* ZPopupPresenter in Frameworks */ = {isa = PBXBuildFile; productRef = 094A7B55291EA61A00735FC8 /* ZPopupPresenter */; };
 		094A7B58291EA92900735FC8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B57291EA92900735FC8 /* MenuView.swift */; };
 		094A7B5A291EAA1B00735FC8 /* Demo1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B59291EAA1B00735FC8 /* Demo1View.swift */; };
 		094A7B5C291EAA2600735FC8 /* Demo2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B5B291EAA2600735FC8 /* Demo2View.swift */; };
 		094A7B60291EB36A00735FC8 /* Demo2DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B5F291EB36A00735FC8 /* Demo2DetailsView.swift */; };
 		094A7B62291EC04B00735FC8 /* Demo2ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A7B61291EC04B00735FC8 /* Demo2ItemView.swift */; };
+		09537B3D2AF18F9900CEC5B0 /* ZPopupPresenter in Frameworks */ = {isa = PBXBuildFile; productRef = 09537B3C2AF18F9900CEC5B0 /* ZPopupPresenter */; };
+		09537B3F2AF18FE900CEC5B0 /* Demo4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09537B3E2AF18FE900CEC5B0 /* Demo4View.swift */; };
 		09B9E285291E785F00D21DE7 /* ExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9E284291E785F00D21DE7 /* ExamplesApp.swift */; };
 		09B9E287291E785F00D21DE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9E286291E785F00D21DE7 /* ContentView.swift */; };
 		09B9E289291E786000D21DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B9E288291E786000D21DE7 /* Assets.xcassets */; };
@@ -29,6 +30,8 @@
 		094A7B5B291EAA2600735FC8 /* Demo2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo2View.swift; sourceTree = "<group>"; };
 		094A7B5F291EB36A00735FC8 /* Demo2DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo2DetailsView.swift; sourceTree = "<group>"; };
 		094A7B61291EC04B00735FC8 /* Demo2ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo2ItemView.swift; sourceTree = "<group>"; };
+		09537B392AF18F2B00CEC5B0 /* @ZPopupPresenter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "@ZPopupPresenter"; path = ../..; sourceTree = "<group>"; };
+		09537B3E2AF18FE900CEC5B0 /* Demo4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo4View.swift; sourceTree = "<group>"; };
 		09B9E281291E785F00D21DE7 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B9E284291E785F00D21DE7 /* ExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesApp.swift; sourceTree = "<group>"; };
 		09B9E286291E785F00D21DE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,18 +45,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				094A7B56291EA61A00735FC8 /* ZPopupPresenter in Frameworks */,
+				09537B3D2AF18F9900CEC5B0 /* ZPopupPresenter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09537B3A2AF18F6700CEC5B0 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				09537B392AF18F2B00CEC5B0 /* @ZPopupPresenter */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		09537B3B2AF18F9900CEC5B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		09B9E278291E785F00D21DE7 = {
 			isa = PBXGroup;
 			children = (
+				09537B3A2AF18F6700CEC5B0 /* Packages */,
 				09B9E283291E785F00D21DE7 /* Examples */,
 				09B9E282291E785F00D21DE7 /* Products */,
+				09537B3B2AF18F9900CEC5B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +96,7 @@
 				094A7B61291EC04B00735FC8 /* Demo2ItemView.swift */,
 				094A7B5F291EB36A00735FC8 /* Demo2DetailsView.swift */,
 				0918BEEA292829C400DC7C91 /* Demo3View.swift */,
+				09537B3E2AF18FE900CEC5B0 /* Demo4View.swift */,
 				0918BEEC29282B5300DC7C91 /* Constants.swift */,
 				09B9E288291E786000D21DE7 /* Assets.xcassets */,
 				09B9E28A291E786000D21DE7 /* Examples.entitlements */,
@@ -109,7 +130,7 @@
 			);
 			name = Examples;
 			packageProductDependencies = (
-				094A7B55291EA61A00735FC8 /* ZPopupPresenter */,
+				09537B3C2AF18F9900CEC5B0 /* ZPopupPresenter */,
 			);
 			productName = Examples;
 			productReference = 09B9E281291E785F00D21DE7 /* Examples.app */;
@@ -140,7 +161,6 @@
 			);
 			mainGroup = 09B9E278291E785F00D21DE7;
 			packageReferences = (
-				094A7B54291EA61A00735FC8 /* XCRemoteSwiftPackageReference "ZPopupPresenter" */,
 			);
 			productRefGroup = 09B9E282291E785F00D21DE7 /* Products */;
 			projectDirPath = "";
@@ -170,6 +190,7 @@
 			files = (
 				09B9E287291E785F00D21DE7 /* ContentView.swift in Sources */,
 				094A7B5C291EAA2600735FC8 /* Demo2View.swift in Sources */,
+				09537B3F2AF18FE900CEC5B0 /* Demo4View.swift in Sources */,
 				094A7B58291EA92900735FC8 /* MenuView.swift in Sources */,
 				09B9E285291E785F00D21DE7 /* ExamplesApp.swift in Sources */,
 				094A7B60291EB36A00735FC8 /* Demo2DetailsView.swift in Sources */,
@@ -387,21 +408,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		094A7B54291EA61A00735FC8 /* XCRemoteSwiftPackageReference "ZPopupPresenter" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Jnis/ZPopupPresenter.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		094A7B55291EA61A00735FC8 /* ZPopupPresenter */ = {
+		09537B3C2AF18F9900CEC5B0 /* ZPopupPresenter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 094A7B54291EA61A00735FC8 /* XCRemoteSwiftPackageReference "ZPopupPresenter" */;
 			productName = ZPopupPresenter;
 		};
 /* End XCSwiftPackageProductDependency section */

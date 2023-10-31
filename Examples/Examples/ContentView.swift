@@ -13,17 +13,16 @@ struct ContentView: View {
     let zPopupPresenterModel = ZPopupPresenterModel() // 1. model
     
     var body: some View {
-        ZStack {
-            NavigationView {
-                TabView {
-                    MenuView()
-                        .tabItem {
-                            Label("Menu", systemImage: "list.dash")
-                        }
-                        .environmentObject(zPopupPresenterModel) // 2. inject model for subviews
-                }
+        NavigationView {
+            TabView {
+                MenuView()
+                    .tabItem {
+                        Label("Menu", systemImage: "list.dash")
+                    }
+                    .environmentObject(zPopupPresenterModel) // 2. inject model for subviews
             }
-            
+        }
+        .overlay {
             ZPopupPresenterView(model: zPopupPresenterModel) // 3. popups place
         }
     }

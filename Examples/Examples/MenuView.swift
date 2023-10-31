@@ -51,6 +51,14 @@ struct MenuView: View {
                 })
             })
             
+            Button("Show Demo 4 (snackbar)", action: {
+                zPopupPresenterModel.showPopup({ close in
+                    AnyView(
+                        Demo4View(title: "Title", text: "\(Date())", close: close)
+                    )
+                })
+            })
+            
             Spacer()
         }
         .blur(radius: blurValue)

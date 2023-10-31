@@ -7,50 +7,52 @@
 
 import SwiftUI
 
-extension ZPopupPresenterModel {
-    class IDModel {
-    }
-    
-    struct WrappedView: View {
-        let idModel: IDModel
-        let content: AnyView
-        
-        var body: some View {
-            content
-        }
-    }
-}
-
 public class ZPopupPresenterModel: ObservableObject {
-    @Published var popups: [WrappedView] = []
+    @Published var popupModels: [PopupModel] = []
     
     public init() { }
     
     public func showPopup(_ makeViewClosure: (_ close: @escaping () -> Void) -> AnyView) {
-        let idModel = IDModel()
-        let userView = makeViewClosure({[weak idModel, weak self] in
-            guard let self = self, let idModel = idModel else { return }
-            if let i = self.popups.firstIndex(where: { $0.idModel === idModel }) {
-                self.popups.remove(at: i)
+        let popupModel = PopupModel()
+        popupModel.content = makeViewClosure({[weak popupModel, weak self] in
+            guard let self = self, let popupModel = popupModel else { return }
+            // remove from displaying
+            popupModel.content = nil
+            // clear popup wrappers
+            let noPopups = nil == self.popupModels.first { $0.content != nil }
+            if noPopups {
+                self.popupModels = []
             }
         })
-        popups.append(WrappedView(idModel: idModel, content: userView))
+        popupModels.append(popupModel)
     }
 }
 
 public struct ZPopupPresenterView: View {
-    @StateObject var model: ZPopupPresenterModel
+    @ObservedObject var model: ZPopupPresenterModel
     
     public init(model: ZPopupPresenterModel) {
-        self._model = StateObject(wrappedValue: model)
+        self._model = ObservedObject(wrappedValue: model)
     }
     
     public var body: some View {
         ZStack {
-            ForEach(0..<model.popups.count, id: \.self) { index in
-                model.popups[index]
+            ForEach(0..<model.popupModels.count, id: \.self) { index in
+                PopupWrapperView(popupModel: model.popupModels[index])
                     .zIndex(CGFloat(index + 1))
             }
         }
+    }
+}
+
+class PopupModel: ObservableObject {
+    @Published var content: AnyView?
+}
+
+struct PopupWrapperView: View {
+    @ObservedObject var popupModel: PopupModel
+    
+    var body: some View {
+        popupModel.content
     }
 }

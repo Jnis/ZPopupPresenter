@@ -27,7 +27,7 @@ https://github.com/Jnis/ZPopupPresenter.git
 # Usage
 
 1) Make a shared PresenterModel (ex. by using environment property)
-2) Place ZPopupPresenterView on last position of ZStack into your root view
+2) Add ZPopupPresenterView as overlay of your root view
 
 ``` swift
 import ZPopupPresenter
@@ -36,12 +36,11 @@ struct ContentView: View {
     let zPopupPresenterModel = ZPopupPresenterModel() // 1.1. shared model
     
     var body: some View {
-        ZStack {
-            MyView() 
-                .environmentObject(zPopupPresenterModel) // 1.2. inject model for subviews
-            
-            ZPopupPresenterView(model: zPopupPresenterModel) // 2. popups place
-        }
+        MyView() 
+            .environmentObject(zPopupPresenterModel) // 1.2. inject model for subviews
+            .overlay {
+                ZPopupPresenterView(model: zPopupPresenterModel) // 2. popups place
+            }
     }
 }
 ```
@@ -70,5 +69,5 @@ struct MyView: View {
 
 You can find more examples inside `/Examples` folder.
 
-#License 
+# License 
 MIT
