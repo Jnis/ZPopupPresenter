@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+extension ZPopupPresenterModel {
+    public func showPopup<T: View>(_ makeViewClosure: (_ close: @escaping () -> Void) -> T) {
+        self.showPopup({ close in
+            AnyView(
+                makeViewClosure(close)
+            )
+        })
+    }
+}
+
 public class ZPopupPresenterModel: ObservableObject {
     @Published var popupModels: [PopupModel] = []
     

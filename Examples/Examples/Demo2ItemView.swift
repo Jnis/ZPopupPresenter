@@ -29,13 +29,11 @@ struct Demo2ItemView: View {
         .onTapGesture {
             withAnimation(.spring()) {
                 zPopupPresenterModel.showPopup({ close in
-                    AnyView(
-                        Demo2DetailsView(namespace: namespace, close: {
-                            withAnimation(.spring()) {
-                                close()
-                            }
-                        })
-                    )
+                    Demo2DetailsView(namespace: namespace, close: {
+                        withAnimation(.spring()) {
+                            close()
+                        }
+                    })
                 })
             }
         }

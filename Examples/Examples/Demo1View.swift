@@ -44,15 +44,13 @@ struct Demo1View: View {
         Button(action: {
             withAnimation {
                 zPopupPresenterModel.showPopup({ close in
-                    AnyView(
-                        Demo1View(buttonsOffset: buttonsOffset + 50, close: {
-                            withAnimation {
-                                close()
-                            }
-                        })
-                        .environmentObject(zPopupPresenterModel)
-                        .transition(.slide)
-                    )
+                    Demo1View(buttonsOffset: buttonsOffset + 50, close: {
+                        withAnimation {
+                            close()
+                        }
+                    })
+                    .environmentObject(zPopupPresenterModel)
+                    .transition(.slide)
                 })
             }
         }, label: {

@@ -29,10 +29,8 @@ struct MenuView: View {
             
             Button("Show Demo 1", action: {
                 zPopupPresenterModel.showPopup({ close in
-                    AnyView(
-                        Demo1View(buttonsOffset: 100, close: close)
-                            .environmentObject(zPopupPresenterModel)
-                    )
+                    Demo1View(buttonsOffset: 100, close: close)
+                        .environmentObject(zPopupPresenterModel)
                 })
             })
                 
@@ -45,17 +43,13 @@ struct MenuView: View {
             
             Button("Show Demo 3", action: {
                 zPopupPresenterModel.showPopup({ close in
-                    AnyView(
-                        Demo3View(close: close, blurValue: $blurValue)
-                    )
+                    Demo3View(close: close, blurValue: $blurValue)
                 })
             })
             
             Button("Show Demo 4 (snackbar)", action: {
                 zPopupPresenterModel.showPopup({ close in
-                    AnyView(
-                        Demo4View(title: "Title", text: "\(Date())", close: close)
-                    )
+                    Demo4View(title: "Title", text: "\(Date())", close: close)
                 })
             })
             

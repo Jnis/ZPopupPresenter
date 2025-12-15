@@ -45,7 +45,7 @@ struct ContentView: View {
 }
 ```
 
-3) call `showPopup` method of shared model and wrap your view with `AnyView( ... )`
+3) call `showPopup` method of shared model
 4) call `close` closure to remove popup
 ``` swift
 struct MyView: View {
@@ -56,9 +56,7 @@ struct MyView: View {
             Button("Show Popup", action: {
             
                 zPopupPresenterModel.showPopup({ close in // 3.
-                    AnyView(
-                        DemoPopup1View(closeBlock: close) // 4.
-                    )
+                    DemoPopup1View(closeBlock: close) // 4.
                 })
                 
             })
