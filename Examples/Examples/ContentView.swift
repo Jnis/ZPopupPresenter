@@ -13,7 +13,7 @@ struct ContentView: View {
     let zPopupPresenterModel = ZPopupPresenterModel() // 1. model
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             TabView {
                 MenuView()
                     .tabItem {
